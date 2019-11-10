@@ -2,8 +2,8 @@
 + **Generate** random password for regular user
 + Store password in **hostvars**
 + Create **regular** user and set password
-+ **Disable** password login to `root`
 + Add **ssh** pubkeys for login to regular user
++ **Disable** password login to `root`
 
 ## Requirements
 Only tested on Debian stable, for now.
