@@ -1,6 +1,6 @@
 galaxy_info:
   author: Sean Ho
-  description: Template ansible role
+  description: Set random password
   company: Anchorlytics Consulting
   license: MIT
 
@@ -13,6 +13,9 @@ galaxy_info:
      - 10
 
   galaxy_tags:
-    - template
+    - password
+    - login
+    - user
 
-dependencies: []
+dependencies: 
+ - ho-ansible.sudo
