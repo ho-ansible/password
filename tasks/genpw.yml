@@ -6,6 +6,13 @@
   set_fact:
     user_pw: "{{ lookup('password', '/dev/null') }}"
 
+- name: user | genpw | host_vars dir
+  tags:
+  - directory
+  file:
+    path: "{{ pw_dir }}/{{ inventory_hostname }}"
+    state: directory
+
 - name: user | genpw | save password in host_vars
   tags:
   - hostvars
