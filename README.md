@@ -1,25 +1,28 @@
-# Ansible role: password
-+ Prevent root from having any password login
-+ Generate and store a random password for regular user
+# Ansible role: user
++ **Disable** password login to `root`
++ Create **regular** user
++ Add **ssh** pubkeys for login to regular user
++ **Generate** random password for regular user
++ Store password in **hostvars**
 
 ## Requirements
 Only tested on Debian stable, for now.
 
 ## Role Variables
-+ `sudo_user` (default: `{{ ansible_user }}`): username of regular user
++ `user_name` (default: `{{ ansible_user }}`): username of regular user
 + `pw_store` (default: `{{ inventory_dir }}/host_vars`):
   plaintext passwords will be stored in subdirectories under this path,
-  `{{ inventory_hostname }}/pw.yml`, in a key named `sudo_pw`
+  `{{ inventory_hostname }}/pw.yml`, in a key named `user_pw`
 
 ## Dependencies
-+ role: ho-ansible.sudo
+None
 
 ## Example Playbook
 
 ```
 - hosts: all
   roles:
-    - { role: ho-ansible.password }
+    - { role: ho-ansible.user }
 ```
 
 ## License

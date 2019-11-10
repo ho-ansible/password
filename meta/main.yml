@@ -1,6 +1,6 @@
 galaxy_info:
   author: Sean Ho
-  description: Set random password
+  description: Manage regular user and password
   company: Anchorlytics Consulting
   license: MIT
 
@@ -17,5 +17,4 @@ galaxy_info:
     - login
     - user
 
-dependencies: 
- - ho-ansible.sudo
+dependencies: []
