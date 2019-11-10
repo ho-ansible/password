@@ -1,0 +1,14 @@
+---
+
+- name: user | genpw | create random password
+  tags:
+  - password
+  set_fact:
+    user_pw: "{{ lookup('password', '/dev/null') }}"
+
+- name: user | genpw | save password in host_vars
+  tags:
+  - hostvars
+  template:
+    src: pw.yml.j2
+    dest: "{{ pw_dir }}/{{ inventory_hostname }}/pw.yml"
