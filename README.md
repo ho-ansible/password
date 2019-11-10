@@ -10,7 +10,6 @@ Only tested on Debian stable, for now.
 
 ## Role Variables
 + `user_name` (default: `{{ ansible_user }}`): username of regular user
-+ `user_pw` (auto-generated): stores plaintext password
 + `pw_dir` (default: `{{ inventory_dir }}/host_vars`):
   plaintext passwords will be stored in subdirectories under this path,
   `{{ inventory_hostname }}/pw.yml`, in a key named `user_pw`
