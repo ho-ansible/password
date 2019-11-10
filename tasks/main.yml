@@ -1,1 +1,20 @@
 ---
+
+- include_tasks: genpw.yml
+  when: user_pw is not defined
+
+- name: user | regular user
+  user:
+    name: "{{ user_name }}"
+    password: "{{ user_pw | 
+    groups: "adm"
+    shell: /bin/bash
+
+- name: sudo | SSH keys
+  tags:
+  - ssh
+  authorized_key:
+    user: "{{ sudo_user }}"
+    key: "{{ ssh_authorized_keys }}"
+    exclusive: yes
+
