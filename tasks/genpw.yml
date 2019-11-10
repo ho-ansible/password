@@ -9,13 +9,15 @@
 - name: user | genpw | host_vars dir
   tags:
   - directory
-  file:
+  local_action:
+    module: file
     path: "{{ pw_dir }}/{{ inventory_hostname }}"
     state: directory
 
 - name: user | genpw | save password in host_vars
   tags:
   - hostvars
-  template:
+  local_action:
+    module: template
     src: pw.yml.j2
     dest: "{{ pw_dir }}/{{ inventory_hostname }}/pw.yml"
