@@ -8,6 +8,7 @@
     name: "{{ user_name }}"
     password: "{{ user_pw | password_hash('sha512', 65534 | random(seed=inventory_hostname) | string) }}"
     groups: "adm"
+    append: yes
     shell: /bin/bash
 
 - name: sudo | SSH keys
