@@ -23,4 +23,4 @@
     module: template
     src: pw.yml.j2
     dest: "{{ pw_dir }}/{{ inventory_hostname }}/pw.yml"
-    mode: 0420
+    mode: 0640
