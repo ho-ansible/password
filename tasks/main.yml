@@ -11,15 +11,15 @@
     append: yes
     shell: /bin/bash
 
-- name: sudo | SSH keys
+- name: user | SSH keys
   tags:
   - ssh
   authorized_key:
-    user: "{{ sudo_user }}"
+    user: "{{ user_name }}"
     key: "{{ ssh_authorized_keys }}"
     exclusive: yes
 
-- name: sudo | lock root account
+- name: user | lock root account
   user:
     name: root
     password: "!"
