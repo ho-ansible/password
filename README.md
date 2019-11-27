@@ -3,7 +3,6 @@
 + Store password in **hostvars**
 + Create **regular** user and set password
 + Add **ssh** pubkeys for login to regular user
-+ **Disable** password login to `root`
 
 ## Requirements
 Only tested on Debian stable, for now.

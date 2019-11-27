@@ -19,8 +19,3 @@
     key: "{{ ssh_authorized_keys }}"
     exclusive: yes
 
-- name: user | lock root account
-  user:
-    name: root
-    password: "!"
-
