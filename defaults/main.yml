@@ -1,3 +1,4 @@
 ---
 user_name: "{{ ansible_user }}"
 pw_dir: "{{ inventory_dir }}/host_vars"
+user_ssh_pubkeys:

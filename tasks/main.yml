@@ -16,6 +16,6 @@
   - ssh
   authorized_key:
     user: "{{ user_name }}"
-    key: "{{ ssh_authorized_keys }}"
+    key: "{{ user_ssh_pubkeys }}"
     exclusive: yes
 

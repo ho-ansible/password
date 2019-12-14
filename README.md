@@ -12,6 +12,8 @@ Only tested on Debian stable, for now.
 + `pw_dir` (default: `{{ inventory_dir }}/host_vars`):
   plaintext passwords will be stored in subdirectories under this path,
   `{{ inventory_hostname }}/pw.yml`, in a key named `user_pw`
++ `user_ssh_pubkeys` (default: empty): newline-delimited string of keys
+   to place in user's authorized_keys
 
 ## Dependencies
 None
