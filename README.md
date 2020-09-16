@@ -15,16 +15,11 @@ Only tested on Debian stable, for now.
 + `user_ssh_pubkeys` (default: empty): newline-delimited string of keys
    to place in user's authorized_keys
 
+## Playbooks
++ `main.yml`: apply role
+
 ## Dependencies
 None
-
-## Example Playbook
-
-```
-- hosts: all
-  roles:
-    - { role: ho-ansible.user }
-```
 
 ## License
 MIT

@@ -1,0 +1,9 @@
+#! /usr/bin/env ansible-playbook
+# Configure user accounts
+---
+- name: user | accounts
+  hosts: all
+  roles:
+  - role: user
+    tags:
+    - user
