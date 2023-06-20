@@ -4,7 +4,7 @@
   tags:
   - password
   set_fact:
-    user_pw: "{{ lookup('password', '/dev/null') }}"
+    user_pw: "{{ lookup('ansible.builtin.password', '/dev/null') }}"
 
 - name: user | genpw | host_vars dir
   tags:
